@@ -51,13 +51,13 @@ tmpDir = mktempdir(; prefix="fmibuildjl_test_", cleanup=false)
 fmu_save_path = joinpath(tmpDir, "BouncingBall.fmu")  
 ```
 
-    [36m[1m[ [22m[39m[36m[1mInfo: [22m[39mSaving example files at: C:\Users\RUNNER~1\AppData\Local\Temp\fmibuildjl_test_oT79QP
+    [36m[1m[ [22m[39m[36m[1mInfo: [22m[39mSaving example files at: C:\Users\RUNNER~1\AppData\Local\Temp\fmibuildjl_test_TfcMf5
     
 
 
 
 
-    "C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\fmibuildjl_test_oT79QP\\BouncingBall.fmu"
+    "C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\fmibuildjl_test_TfcMf5\\BouncingBall.fmu"
 
 
 
@@ -241,6 +241,8 @@ Pkg.activate(notebook_env); # return to the original notebooks enviroment
 ```
 
     [32m[1m  Activating[22m[39m project at `D:\a\FMIExport.jl\FMIExport.jl\examples\FMI2\BouncingBall`
+
+    
     
 
     [32m[1m   Resolving[22m[39m package versions...
@@ -320,7 +322,7 @@ Pkg.activate(notebook_env); # return to the original notebooks enviroment
       [90m[46d2c3a1] [39m[92m+ MuladdMacro v0.2.4[39m
       [90m[d41bc354] [39m[92m+ NLSolversBase v7.8.3[39m
       [90m[77ba4419] [39m[92m+ NaNMath v1.0.2[39m
-      [90m[8913a72c] [39m[92m+ NonlinearSolve v3.15.1[39m
+    [33m⌅[39m [90m[8913a72c] [39m[92m+ NonlinearSolve v3.15.1[39m
       [90m[6fe1bfb0] [39m[92m+ OffsetArrays v1.14.1[39m
       [90m[bac558e1] [39m[92m+ OrderedCollections v1.6.3[39m
       [90m[9b87118b] [39m[92m+ PackageCompiler v2.1.22[39m
@@ -343,11 +345,11 @@ Pkg.activate(notebook_env); # return to the original notebooks enviroment
       [90m[476501e8] [39m[92m+ SLEEFPirates v0.6.43[39m
       [90m[0bca4576] [39m[92m+ SciMLBase v2.58.0[39m
       [90m[19f34311] [39m[92m+ SciMLJacobianOperators v0.1.1[39m
-      [90m[c0aeaf25] [39m[92m+ SciMLOperators v0.3.11[39m
+      [90m[c0aeaf25] [39m[92m+ SciMLOperators v0.3.12[39m
       [90m[53ae85a6] [39m[92m+ SciMLStructures v1.5.0[39m
       [90m[6c6a2e73] [39m[92m+ Scratch v1.2.1[39m
       [90m[efcf1570] [39m[92m+ Setfield v1.1.1[39m
-      [90m[727e6d20] [39m[92m+ SimpleNonlinearSolve v1.12.3[39m
+    [33m⌅[39m [90m[727e6d20] [39m[92m+ SimpleNonlinearSolve v1.12.3[39m
       [90m[9f842d2f] [39m[92m+ SparseConnectivityTracer v0.6.8[39m
       [90m[0a514795] [39m[92m+ SparseMatrixColorings v0.4.8[39m
       [90m[e56a9233] [39m[92m+ Sparspak v0.3.9[39m
@@ -431,38 +433,34 @@ saveFMU(fmu, fmu_save_path, fmu_source_path; debug=false, compress=false) # feel
 ```
 
     [36m[1m[ [22m[39m[36m[1mInfo: [22m[39m[Build FMU] Generating package ...
-    [36m[1m[ [22m[39m[36m[1mInfo: [22m[39m[Build FMU] Source package is D:\a\FMIExport.jl\FMIExport.jl\examples\FMI2\BouncingBall, deployed at C:/Users/RUNNER~1/AppData/Local/Temp/fmibuildjl_6IX3hk\merged_BouncingBall
+    [36m[1m[ [22m[39m[36m[1mInfo: [22m[39m[Build FMU] Source package is D:\a\FMIExport.jl\FMIExport.jl\examples\FMI2\BouncingBall, deployed at C:/Users/RUNNER~1/AppData/Local/Temp/fmibuildjl_flOAnu\merged_BouncingBall
     [36m[1m[ [22m[39m[36m[1mInfo: [22m[39m[Build FMU] Relative src file path is src\BouncingBall.jl
     [36m[1m[ [22m[39m[36m[1mInfo: [22m[39m[Build FMU] ... reading FMU template file at C:\Users\runneradmin\.julia\packages\FMIBuild\zfhlh\src/../template/ME/FMU2/src/FMU2_content.jl
-    [36m[1m[ [22m[39m[36m[1mInfo: [22m[39m[Build FMU] ... reading old FMU source file at C:/Users/RUNNER~1/AppData/Local/Temp/fmibuildjl_6IX3hk\merged_BouncingBall\src\BouncingBall.jl
+    [36m[1m[ [22m[39m[36m[1mInfo: [22m[39m[Build FMU] ... reading old FMU source file at C:/Users/RUNNER~1/AppData/Local/Temp/fmibuildjl_flOAnu\merged_BouncingBall\src\BouncingBall.jl
     [36m[1m[ [22m[39m[36m[1mInfo: [22m[39m[Build FMU] Removing `FMIBUILD_NO_EXPORT_*` blocks ...
     [36m[1m[ [22m[39m[36m[1mInfo: [22m[39m[Build FMU] ... removed `FMIBUILD_NO_EXPORT_*` blocks.
     [36m[1m[ [22m[39m[36m[1mInfo: [22m[39m[Build FMU] Adding/removing dependencies ...
     [36m[1m[ [22m[39m[36m[1mInfo: [22m[39m[Build FMU]    > Using active environment `D:\a\FMIExport.jl\FMIExport.jl\examples\Project.toml`.
     [32m[1m  Activating[22m[39m project at `D:\a\FMIExport.jl\FMIExport.jl\examples`
-    [32m[1m  Activating[22m[39m project at `C:\Users\RUNNER~1\AppData\Local\Temp\fmibuildjl_6IX3hk\merged_BouncingBall`
+    [32m[1m  Activating[22m[39m project at `C:\Users\RUNNER~1\AppData\Local\Temp\fmibuildjl_flOAnu\merged_BouncingBall`
     [36m[1m[ [22m[39m[36m[1mInfo: [22m[39m[Build FMU]    > Most recent version of `FMIExport` already checked out for FMU, is `D:\a\FMIExport.jl\FMIExport.jl`.
     [36m[1m[ [22m[39m[36m[1mInfo: [22m[39m[Build FMU]    > Default environment `D:\a\FMIExport.jl\FMIExport.jl\examples\Project.toml` has no dependency on `FMIBase`, adding `FMIBase` from registry.
     
 
     [32m[1m    Updating[22m[39m registry at `C:\Users\runneradmin\.julia\registries\General.toml`
-    
-
     [32m[1m   Resolving[22m[39m package versions...
-
-    
     
 
-    [32m[1m    Updating[22m[39m `C:\Users\runneradmin\AppData\Local\Temp\fmibuildjl_6IX3hk\merged_BouncingBall\Project.toml`
+    [32m[1m    Updating[22m[39m `C:\Users\runneradmin\AppData\Local\Temp\fmibuildjl_flOAnu\merged_BouncingBall\Project.toml`
       [90m[900ee838] [39m[92m+ FMIBase v1.0.10[39m
-    [32m[1m  No Changes[22m[39m to `C:\Users\runneradmin\AppData\Local\Temp\fmibuildjl_6IX3hk\merged_BouncingBall\Manifest.toml`
+    [32m[1m  No Changes[22m[39m to `C:\Users\runneradmin\AppData\Local\Temp\fmibuildjl_flOAnu\merged_BouncingBall\Manifest.toml`
     
 
-    [32m[1m    Updating[22m[39m `C:\Users\runneradmin\AppData\Local\Temp\fmibuildjl_6IX3hk\merged_BouncingBall\Project.toml`
+    [32m[1m    Updating[22m[39m `C:\Users\runneradmin\AppData\Local\Temp\fmibuildjl_flOAnu\merged_BouncingBall\Project.toml`
       [90m[226f0e26] [39m[91m- FMIBuild v0.3.2[39m
-    [32m[1m    Updating[22m[39m `C:\Users\runneradmin\AppData\Local\Temp\fmibuildjl_6IX3hk\merged_BouncingBall\Manifest.toml`
-    
+    [32m[1m    Updating[22m[39m `C:\Users\runneradmin\AppData\Local\Temp\fmibuildjl_flOAnu\merged_BouncingBall\Manifest.toml`
 
+    
       [90m[226f0e26] [39m[91m- FMIBuild v0.3.2[39m
       [90m[c27321d9] [39m[91m- Glob v1.3.1[39m
       [90m[9b87118b] [39m[91m- PackageCompiler v2.1.22[39m
@@ -482,7 +480,7 @@ saveFMU(fmu, fmu_save_path, fmu_source_path; debug=false, compress=false) # feel
     [36m[1m[ [22m[39m[36m[1mInfo: [22m[39m[Build FMU]    > Removed FMIBuild
     [32m[1m  Activating[22m[39m project at `D:\a\FMIExport.jl\FMIExport.jl\examples`
     [36m[1m[ [22m[39m[36m[1mInfo: [22m[39m[Build FMU] ... adding/removing dependencies done.
-    [36m[1m[ [22m[39m[36m[1mInfo: [22m[39m[Build FMU] ... generating new FMU source file at C:/Users/RUNNER~1/AppData/Local/Temp/fmibuildjl_6IX3hk\merged_BouncingBall\src\BouncingBall.jl
+    [36m[1m[ [22m[39m[36m[1mInfo: [22m[39m[Build FMU] ... generating new FMU source file at C:/Users/RUNNER~1/AppData/Local/Temp/fmibuildjl_flOAnu\merged_BouncingBall\src\BouncingBall.jl
     [36m[1m[ [22m[39m[36m[1mInfo: [22m[39m[Build FMU] ... generating package done.
     [36m[1m[ [22m[39m[36m[1mInfo: [22m[39m[Build FMU] Compiling FMU ...
     
@@ -515,13 +513,13 @@ saveFMU(fmu, fmu_save_path, fmu_source_path; debug=false, compress=false) # feel
       │    ├── libuv-2.dll - 962.484 KiB
       │    ├── libwinpthread-1.dll - 330.164 KiB
       │    ├── libz.dll - 233.070 KiB
-      │    ├── libjulia.dll - 229.312 KiB
+      │    ├── 
+
+    libjulia.dll - 229.312 KiB
       ├── Stdlibs:
       │   ├── LibGit2_jll
       │   │   ├── libgit2.dll - 1.920 MiB
       │   ├── SuiteSparse_jll
-
-    
       │   │   ├── libamd.dll - 149.055 KiB
       │   │   ├── libbtf.dll - 109.484 KiB
       │   │   ├── libcamd.dll - 154.594 KiB
@@ -563,9 +561,9 @@ saveFMU(fmu, fmu_save_path, fmu_source_path; debug=false, compress=false) # feel
 
       ├── OpenSpecFun_jll - 798.680 KiB
       ├── XML2_jll - 11.095 MiB
-      └── oneTBB_jll
+    
 
-     - 3.461 MiB
+      └── oneTBB_jll - 3.461 MiB
     
 
       Total artifact file size: 469.659 MiB
@@ -581,12 +579,14 @@ saveFMU(fmu, fmu_save_path, fmu_source_path; debug=false, compress=false) # feel
     
 
     
-    [pid 3292] waiting for IO to finish:
+    [pid 5768] waiting for IO to finish:
      Handle type        uv_handle_t->data
-     timer              0000012bdc694f00->0000012be928c580
+     timer              0000024e1bb9b5f0->0000024e27f13820
 
 
     - PackageCompiler: compiling nonincremental system image
+
+    
     
 
     [32m[1mPrecompiling[22m[39m
@@ -598,8 +598,6 @@ saveFMU(fmu, fmu_save_path, fmu_source_path; debug=false, compress=false) # feel
     
 
     [32m  ✓ [39m[90mMuladdMacro[39m
-    
-
     [32m  ✓ [39m[90mFunctionWrappers[39m
     
 
@@ -622,10 +620,14 @@ saveFMU(fmu, fmu_save_path, fmu_source_path; debug=false, compress=false) # feel
     
 
     [32m  ✓ [39m[90mUnPack[39m
+    
+
     [32m  ✓ [39m[90mTest[39m
     
 
     [32m  ✓ [39m[90mOpenLibm_jll[39m
+    
+
     [32m  ✓ [39m[90mInverseFunctions[39m
     
 
@@ -656,21 +658,15 @@ saveFMU(fmu, fmu_save_path, fmu_source_path; debug=false, compress=false) # feel
     [32m  ✓ [39m[90mCompat[39m
     
 
-    [32m  ✓ [39m[90mOrderedCollections[39m
-    
-
     [32m  ✓ [39m[90mRequires[39m
     
 
+    [32m  ✓ [39m[90mOrderedCollections[39m
     [32m  ✓ [39m[90mDataValueInterfaces[39m
     
 
-    [32m  ✓ [39m[90mEnumX[39m
-    
-
     [32m  ✓ [39m[90mReexport[39m
-    
-
+    [32m  ✓ [39m[90mEnumX[39m
     [32m  ✓ [39m[90mSIMDTypes[39m
     
 
@@ -680,8 +676,10 @@ saveFMU(fmu, fmu_save_path, fmu_source_path; debug=false, compress=false) # feel
     [32m  ✓ [39m[90mDocStringExtensions[39m
     
 
-    [32m  ✓ [39m[90mCompositionsBase[39m
     [32m  ✓ [39m[90mIrrationalConstants[39m
+    
+
+    [32m  ✓ [39m[90mCompositionsBase[39m
     
 
     [32m  ✓ [39m[90mCpuId[39m
@@ -709,55 +707,67 @@ saveFMU(fmu, fmu_save_path, fmu_source_path; debug=false, compress=false) # feel
     
 
     [32m  ✓ [39m[90mFastLapackInterface[39m
+    
+
     [32m  ✓ [39m[90mFunctors[39m
     
 
     [32m  ✓ [39m[90mStaticArraysCore[39m
+
+    
     [32m  ✓ [39m[90mFunctionWrappersWrappers[39m
     
 
     [32m  ✓ [39m[90mRuntimeGeneratedFunctions[39m
     
 
-    [32m  ✓ [39m[90mTimerOutputs[39m
     [32m  ✓ [39m[90mTableTraits[39m
     
 
-    [32m  ✓ [39m[90mInverseFunctions → InverseFunctionsDatesExt[39m
+    [32m  ✓ [39m[90mTimerOutputs[39m
     
 
     [32m  ✓ [39m[90mNaNMath[39m
     
 
-    [32m  ✓ [39m[90mProgressMeter[39m
+    [32m  ✓ [39m[90mInverseFunctions → InverseFunctionsDatesExt[39m
     
 
-    [32m  ✓ [39m[90mThreadingUtilities[39m
+    [32m  ✓ [39m[90mProgressMeter[39m
     
 
     [32m  ✓ [39m[90mMLStyle[39m
     
 
-    [32m  ✓ [39m[90mTruncatedStacktraces[39m
+    [32m  ✓ [39m[90mThreadingUtilities[39m
+    
+
     [32m  ✓ [39m[90mCommonSubexpressions[39m
+    
+
+    [32m  ✓ [39m[90mTruncatedStacktraces[39m
+    
+
+    [32m  ✓ [39m[90mJLLWrappers[39m
     
 
     [32m  ✓ [39m[90mSparseArrays[39m
     [32m  ✓ [39m[90mPrecompileTools[39m
-    [32m  ✓ [39m[90mJLLWrappers[39m
     
 
     [32m  ✓ [39m[90mCompat → CompatLinearAlgebraExt[39m
     
 
-    [32m  ✓ [39m[90mParameters[39m
     [32m  ✓ [39m[90mAdapt[39m
+    [32m  ✓ [39m[90mParameters[39m
+    
+
+    [32m  ✓ [39m[90mZipFile[39m
     
 
     [32m  ✓ [39m[90mADTypes → ADTypesEnzymeCoreExt[39m
     
 
-    [32m  ✓ [39m[90mZipFile[39m
     [32m  ✓ [39m[90mLogExpFunctions[39m
     
 
@@ -768,12 +778,22 @@ saveFMU(fmu, fmu_save_path, fmu_source_path; debug=false, compress=false) # feel
     
 
     [32m  ✓ [39m[90mTables[39m
-    
-
     [32m  ✓ [39m[90mInverseFunctions → InverseFunctionsTestExt[39m
     
 
     [32m  ✓ [39m[90mCompositionsBase → CompositionsBaseInverseFunctionsExt[39m
+    
+
+    [32m  ✓ [39m[90mIntelOpenMP_jll[39m
+    
+
+    [32m  ✓ [39m[90moneTBB_jll[39m
+    
+
+    [32m  ✓ [39m[90mLibiconv_jll[39m
+    
+
+    [32m  ✓ [39m[90mOpenSpecFun_jll[39m
     
 
     [32m  ✓ [39m[90mKLU[39m
@@ -785,92 +805,75 @@ saveFMU(fmu, fmu_save_path, fmu_source_path; debug=false, compress=false) # feel
     [32m  ✓ [39m[90mFillArrays → FillArraysSparseArraysExt[39m
     
 
-    [32m  ✓ [39m[90mRecipesBase[39m
-    
-
-    [32m  ✓ [39m[90mKrylov[39m
-    [32m  ✓ [39m[90mStatic[39m
-    
-
     [32m  ✓ [39m[90mExpronicon[39m
     
 
-    [32m  ✓ [39m[90mIntelOpenMP_jll[39m
-    [32m  ✓ [39m[90moneTBB_jll[39m
+    [32m  ✓ [39m[90mRecipesBase[39m
     
 
-    [32m  ✓ [39m[90mLibiconv_jll[39m
+    [32m  ✓ [39m[90mStatic[39m
     
 
     [32m  ✓ [39m[90mChainRulesCore[39m
-    [32m  ✓ [39m[90mOpenSpecFun_jll[39m
+    
+
+    [32m  ✓ [39m[90mKrylov[39m
+    
+
+    [32m  ✓ [39m[90mArrayInterface[39m
+    [32m  ✓ [39m[90mDataStructures[39m
     
 
     [32m  ✓ [39m[90mGPUArraysCore[39m
     
 
-    [32m  ✓ [39m[90mArrayInterface[39m
-    
-
-    [32m  ✓ [39m[90mDataStructures[39m
-    
-
-    [32m  ✓ [39m[90mOffsetArrays → OffsetArraysAdaptExt[39m
-    
-
     [32m  ✓ [39m[90mEnzymeCore → AdaptExt[39m
     
 
+    [32m  ✓ [39m[90mOffsetArrays → OffsetArraysAdaptExt[39m
     [32m  ✓ [39m[90mLogExpFunctions → LogExpFunctionsInverseFunctionsExt[39m
     
 
-    [32m  ✓ [39m[90mFillArrays → FillArraysStatisticsExt[39m
     [32m  ✓ [39m[90mSetfield[39m
+    
+
+    [32m  ✓ [39m[90mMKL_jll[39m
     
 
     [32m  ✓ [39m[90mAccessors[39m
     
 
     [32m  ✓ [39m[90mBitTwiddlingConvenienceFunctions[39m
-    
-
-    [32m  ✓ [39m[90mCPUSummary[39m
-    
-
-    [32m  ✓ [39m[90mChainRulesCore → ChainRulesCoreSparseArraysExt[39m
-    
-
-    [32m  ✓ [39m[90mMKL_jll[39m
+    [32m  ✓ [39m[90mFillArrays → FillArraysStatisticsExt[39m
     
 
     [32m  ✓ [39m[90mXML2_jll[39m
     
 
+    [32m  ✓ [39m[90mChainRulesCore → ChainRulesCoreSparseArraysExt[39m
+    
+
     [32m  ✓ [39m[90mADTypes → ADTypesChainRulesCoreExt[39m
     
 
-    [32m  ✓ [39m[90mArrayInterface → ArrayInterfaceGPUArraysCoreExt[39m
+    [32m  ✓ [39m[90mCPUSummary[39m
     
 
+    [32m  ✓ [39m[90mArrayInterface → ArrayInterfaceStaticArraysCoreExt[39m
     [32m  ✓ [39m[90mArrayInterface → ArrayInterfaceSparseArraysExt[39m
     
 
     [32m  ✓ [39m[90mLogExpFunctions → LogExpFunctionsChainRulesCoreExt[39m
     
 
-    [32m  ✓ [39m[90mArrayInterface → ArrayInterfaceStaticArraysCoreExt[39m
+    [32m  ✓ [39m[90mArrayInterface → ArrayInterfaceGPUArraysCoreExt[39m
     
 
     [32m  ✓ [39m[90mSparspak[39m
-    
-
     [32m  ✓ [39m[90mAccessors → AccessorsDatesExt[39m
     
 
     [32m  ✓ [39m[90mHostCPUFeatures[39m
-    
-
-    [32m  ✓ [39m[90mPolyesterWeave[39m
     
 
     [32m  ✓ [39m[90mDifferentiationInterface[39m
@@ -882,22 +885,25 @@ saveFMU(fmu, fmu_save_path, fmu_source_path; debug=false, compress=false) # feel
     [32m  ✓ [39m[90mSparseMatrixColorings[39m
     
 
-    [32m  ✓ [39m[90mSparseConnectivityTracer[39m
+    [32m  ✓ [39m[90mPolyesterWeave[39m
     
 
-    [32m  ✓ [39m[90mSpecialFunctions[39m
+    [32m  ✓ [39m[90mSparseConnectivityTracer[39m
     
 
     [32m  ✓ [39m[90mSciMLStructures[39m
     
 
+    [32m  ✓ [39m[90mSpecialFunctions[39m
+    
+
     [32m  ✓ [39m[90mMaybeInplace[39m
     
 
-    [32m  ✓ [39m[90mStaticArrayInterface[39m
+    [32m  ✓ [39m[90mFiniteDiff[39m
     
 
-    [32m  ✓ [39m[90mFiniteDiff[39m
+    [32m  ✓ [39m[90mStaticArrayInterface[39m
     
 
     [32m  ✓ [39m[90mAccessors → AccessorsTestExt[39m
@@ -916,10 +922,8 @@ saveFMU(fmu, fmu_save_path, fmu_source_path; debug=false, compress=false) # feel
     
 
     [32m  ✓ [39m[90mMaybeInplace → MaybeInplaceSparseArraysExt[39m
-    [32m  ✓ [39m[90mArrayLayouts[39m
     
 
-    [32m  ✓ [39m[90mStaticArrayInterface → StaticArrayInterfaceOffsetArraysExt[39m
     [32m  ✓ [39m[90mSpecialFunctions → SpecialFunctionsChainRulesCoreExt[39m
     
 
@@ -929,26 +933,34 @@ saveFMU(fmu, fmu_save_path, fmu_source_path; debug=false, compress=false) # feel
     [32m  ✓ [39m[90mDifferentiationInterface → DifferentiationInterfaceFiniteDiffExt[39m
     
 
-    [32m  ✓ [39m[90mDifferentiationInterface → DifferentiationInterfaceSparseMatrixColoringsExt[39m
-
+    [32m  ✓ [39m[90mStaticArrayInterface → StaticArrayInterfaceOffsetArraysExt[39m
     
-    [32m  ✓ [39m[90mSciMLOperators[39m
+
+    [32m  ✓ [39m[90mArrayLayouts[39m
+    
+
+    [32m  ✓ [39m[90mDifferentiationInterface → DifferentiationInterfaceSparseMatrixColoringsExt[39m
+    
+
     [32m  ✓ [39m[90mSymbolicIndexingInterface[39m
     
 
-    [32m  ✓ [39m[90mCloseOpenIntervals[39m
-    
-
-    [32m  ✓ [39m[90mArrayLayouts → ArrayLayoutsSparseArraysExt[39m
-    
-
-    [32m  ✓ [39m[90mLayoutPointers[39m
+    [32m  ✓ [39m[90mSciMLOperators[39m
     
 
     [32m  ✓ [39m[90mDiffRules[39m
     
 
+    [32m  ✓ [39m[90mCloseOpenIntervals[39m
+    
+
     [32m  ✓ [39m[90mSparseConnectivityTracer → SparseConnectivityTracerSpecialFunctionsExt[39m
+    
+
+    [32m  ✓ [39m[90mLayoutPointers[39m
+    
+
+    [32m  ✓ [39m[90mArrayLayouts → ArrayLayoutsSparseArraysExt[39m
     
 
     [32m  ✓ [39m[90mSciMLOperators → SciMLOperatorsStaticArraysCoreExt[39m
@@ -963,19 +975,14 @@ saveFMU(fmu, fmu_save_path, fmu_source_path; debug=false, compress=false) # feel
     [32m  ✓ [39m[90mStrideArraysCore[39m
     
 
-    [32m  ✓ [39m[90mLazyArrays[39m
+    [32m  ✓ [39m[90mForwardDiff[39m
     
 
+    [32m  ✓ [39m[90mLazyArrays[39m
     [32m  ✓ [39m[90mRecursiveArrayTools → RecursiveArrayToolsSparseArraysExt[39m
     
 
     [32m  ✓ [39m[90mPolyester[39m
-    
-
-    [32m  ✓ [39m[90mForwardDiff[39m
-    
-
-    [32m  ✓ [39m[90mFastBroadcast[39m
     
 
     [32m  ✓ [39m[90mPreallocationTools[39m
@@ -990,16 +997,19 @@ saveFMU(fmu, fmu_save_path, fmu_source_path; debug=false, compress=false) # feel
     [32m  ✓ [39m[90mDifferentiationInterface → DifferentiationInterfaceForwardDiffExt[39m
     
 
+    [32m  ✓ [39m[90mFastBroadcast[39m
+    
+
     [32m  ✓ [39m[90mRecursiveArrayTools → RecursiveArrayToolsForwardDiffExt[39m
     
 
-    [32m  ✓ [39m[90mRecursiveArrayTools → RecursiveArrayToolsFastBroadcastExt[39m
+    [32m  ✓ [39m[90mLineSearches[39m
     
 
     [32m  ✓ [39m[90mSLEEFPirates[39m
     
 
-    [32m  ✓ [39m[90mLineSearches[39m
+    [32m  ✓ [39m[90mRecursiveArrayTools → RecursiveArrayToolsFastBroadcastExt[39m
     
 
     [32m  ✓ [39m[90mSciMLBase[39m
@@ -1011,14 +1021,16 @@ saveFMU(fmu, fmu_save_path, fmu_source_path; debug=false, compress=false) # feel
     [32m  ✓ [39m[90mLoopVectorization[39m
     
 
-    [32m  ✓ [39m[90mSciMLJacobianOperators[39m
-    
-
     [32m  ✓ [39m[90mLoopVectorization → SpecialFunctionsExt[39m
     
 
-    [32m  ✓ [39m[90mDiffEqBase[39m
+    [32m  ✓ [39m[90mSciMLJacobianOperators[39m
+    
+
     [32m  ✓ [39m[90mLoopVectorization → ForwardDiffExt[39m
+    
+
+    [32m  ✓ [39m[90mDiffEqBase[39m
     
 
     [32m  ✓ [39m[90mLineSearch[39m
@@ -1036,12 +1048,12 @@ saveFMU(fmu, fmu_save_path, fmu_source_path; debug=false, compress=false) # feel
     [32m  ✓ [39m[90mDiffEqBase → DiffEqBaseChainRulesCoreExt[39m
     
 
-    [32m  ✓ [39m
-
-    [90mRecursiveFactorization[39m
+    [32m  ✓ [39m[90mRecursiveFactorization[39m
     
 
-    [32m  ✓ [39m[90mSimpleNonlinearSolve[39m
+    [32m  ✓ [39m
+
+    [90mSimpleNonlinearSolve[39m
     
 
     [32m  ✓ [39m[90mSimpleNonlinearSolve → SimpleNonlinearSolveChainRulesCoreExt[39m
@@ -1060,8 +1072,6 @@ saveFMU(fmu, fmu_save_path, fmu_source_path; debug=false, compress=false) # feel
     
 
     [32m  ✓ [39m[90mDiffEqCallbacks[39m
-
-    
     
 
     [32m  ✓ [39mFMIBase
@@ -1074,10 +1084,12 @@ saveFMU(fmu, fmu_save_path, fmu_source_path; debug=false, compress=false) # feel
     
 
     [32m  ✓ [39mBouncingBall
-      172 dependencies successfully precompiled in 176 seconds
     
 
-    [36m[1m[ [22m[39m[36m[1mInfo: [22m[39mPackageCompiler: Executing C:\Users\RUNNER~1\AppData\Local\Temp\fmibuildjl_6IX3hk\merged_BouncingBall\src\BouncingBall.jl => C:\Users\RUNNER~1\AppData\Local\Temp\jl_packagecompiler_8VHPVj\jl_3A70.tmp
+      172 dependencies successfully precompiled in 174 seconds
+    
+
+    [36m[1m[ [22m[39m[36m[1mInfo: [22m[39mPackageCompiler: Executing C:\Users\RUNNER~1\AppData\Local\Temp\fmibuildjl_flOAnu\merged_BouncingBall\src\BouncingBall.jl => C:\Users\RUNNER~1\AppData\Local\Temp\jl_packagecompiler_DZ2HDN\jl_93C6.tmp
     
 
     [36m[1m[ [22m[39m[36m[1mInfo: [22m[39mPackageCompiler: Done
@@ -1087,7 +1099,7 @@ saveFMU(fmu, fmu_save_path, fmu_source_path; debug=false, compress=false) # feel
     [36m[1m[ [22m[39m[36m[1mInfo: [22m[39m[Build FMU] ... compiling FMU done.
     
 
-    [36m[1m[ [22m[39m[36m[1mInfo: [22m[39m[Build FMU] Patching libjulia.dll @ `C:\Users\RUNNER~1\AppData\Local\Temp\fmibuildjl_6IX3hk\BouncingBall\binaries\win64`...
+    [36m[1m[ [22m[39m[36m[1mInfo: [22m[39m[Build FMU] Patching libjulia.dll @ `C:\Users\RUNNER~1\AppData\Local\Temp\fmibuildjl_flOAnu\BouncingBall\binaries\win64`...
     
 
     [36m[1m┌ [22m[39m[36m[1mInfo: [22m[39mFound embedded libpath
@@ -1134,18 +1146,18 @@ saveFMU(fmu, fmu_save_path, fmu_source_path; debug=false, compress=false) # feel
     	binaries/share/julia/artifacts/07d4e2a4c926ce5a99f7ff402617dc9caa2187a0/bin/mkl_blacs_intelmpi_ilp64.2.dll
     	binaries/share/julia/artifacts/07d4e2a4c926ce5a99f7ff402617dc9caa2187a0/bin/mkl_blacs_intelmpi_lp64.2.dll
     	binaries/share/julia/artifacts/07d4e2a4c926ce5a99f7ff402617dc9caa2187a0/bin/mkl_blacs_lp64.2.dll
-
-    
     	binaries/share/julia/artifacts/07d4e2a4c926ce5a99f7ff402617dc9caa2187a0/bin/mkl_blacs_msmpi_ilp64.2.dll
     	binaries/share/julia/artifacts/07d4e2a4c926ce5a99f7ff402617dc9caa2187a0/bin/mkl_blacs_msmpi_lp64.2.dll
     	binaries/share/julia/artifacts/07d4e2a4c926ce5a99f7ff402617dc9caa2187a0/bin/mkl_cdft_core.2.dll
-    	binaries/share/julia/artifacts/07d4e2a4c926ce5a99f7ff402617dc9caa2187a0/bin/mkl_core.2.dll
 
     
+    	binaries/share/julia/artifacts/07d4e2a4c926ce5a99f7ff402617dc9caa2187a0/bin/mkl_core.2.dll
+    
+
     	binaries/share/julia/artifacts/07d4e2a4c926ce5a99f7ff402617dc9caa2187a0/bin/mkl_def.2.dll
     	binaries/share/julia/artifacts/07d4e2a4c926ce5a99f7ff402617dc9caa2187a0/bin/mkl_intel_thread.2.dll
-
     
+
     	binaries/share/julia/artifacts/07d4e2a4c926ce5a99f7ff402617dc9caa2187a0/bin/mkl_mc3.2.dll
     
 
@@ -1280,8 +1292,6 @@ saveFMU(fmu, fmu_save_path, fmu_source_path; debug=false, compress=false) # feel
     	binaries/share/julia/artifacts/55b1a3d509033b500e2c33e984a35f8ed481879a/share/gtk-doc/html/libxml2/libxml2-xmlreader.html
     	binaries/share/julia/artifacts/55b1a3d509033b500e2c33e984a35f8ed481879a/share/gtk-doc/html/libxml2/libxml2-xmlregexp.html
     	binaries/share/julia/artifacts/55b1a3d509033b500e2c33e984a35f8ed481879a/share/gtk-doc/html/libxml2/libxml2-xmlsave.html
-    
-
     	binaries/share/julia/artifacts/55b1a3d509033b500e2c33e984a35f8ed481879a/share/gtk-doc/html/libxml2/libxml2-xmlschemas.html
     	binaries/share/julia/artifacts/55b1a3d509033b500e2c33e984a35f8ed481879a/share/gtk-doc/html/libxml2/libxml2-xmlschemastypes.html
     	binaries/share/julia/artifacts/55b1a3d509033b500e2c33e984a35f8ed481879a/share/gtk-doc/html/libxml2/libxml2-xmlstring.html
@@ -1298,6 +1308,8 @@ saveFMU(fmu, fmu_save_path, fmu_source_path; debug=false, compress=false) # feel
     	binaries/share/julia/artifacts/55b1a3d509033b500e2c33e984a35f8ed481879a/share/licenses/XML2/Copyright
     	binaries/share/julia/artifacts/79e4bc6534ea5a11e42eaf15947a2272949e4865/bin/iconv.exe
     	binaries/share/julia/artifacts/79e4bc6534ea5a11e42eaf15947a2272949e4865/bin/libcharset-1.dll
+
+    
     	binaries/share/julia/artifacts/79e4bc6534ea5a11e42eaf15947a2272949e4865/bin/libiconv-2.dll
     	binaries/share/julia/artifacts/79e4bc6534ea5a11e42eaf15947a2272949e4865/include/iconv.h
     	binaries/share/julia/artifacts/79e4bc6534ea5a11e42eaf15947a2272949e4865/include/libcharset.h
@@ -1378,8 +1390,6 @@ saveFMU(fmu, fmu_save_path, fmu_source_path; debug=false, compress=false) # feel
     	binaries/share/julia/artifacts/a80da89d0fb528913efffff81a0cf1e2ab988cb2/include/oneapi/tbb/detail/_assert.h
     	binaries/share/julia/artifacts/a80da89d0fb528913efffff81a0cf1e2ab988cb2/include/oneapi/tbb/detail/_attach.h
     	binaries/share/julia/artifacts/a80da89d0fb528913efffff81a0cf1e2ab988cb2/include/oneapi/tbb/detail/_concurrent_queue_base.h
-
-    
     	binaries/share/julia/artifacts/a80da89d0fb528913efffff81a0cf1e2ab988cb2/include/oneapi/tbb/detail/_concurrent_skip_list.h
     	binaries/share/julia/artifacts/a80da89d0fb528913efffff81a0cf1e2ab988cb2/include/oneapi/tbb/detail/_concurrent_unordered_base.h
     	binaries/share/julia/artifacts/a80da89d0fb528913efffff81a0cf1e2ab988cb2/include/oneapi/tbb/detail/_config.h
@@ -1395,6 +1405,8 @@ saveFMU(fmu, fmu_save_path, fmu_source_path; debug=false, compress=false) # feel
     	binaries/share/julia/artifacts/a80da89d0fb528913efffff81a0cf1e2ab988cb2/include/oneapi/tbb/detail/_flow_graph_node_impl.h
     	binaries/share/julia/artifacts/a80da89d0fb528913efffff81a0cf1e2ab988cb2/include/oneapi/tbb/detail/_flow_graph_node_set_impl.h
     	binaries/share/julia/artifacts/a80da89d0fb528913efffff81a0cf1e2ab988cb2/include/oneapi/tbb/detail/_flow_graph_nodes_deduction.h
+
+    
     	binaries/share/julia/artifacts/a80da89d0fb528913efffff81a0cf1e2ab988cb2/include/oneapi/tbb/detail/_flow_graph_tagged_buffer_impl.h
     	binaries/share/julia/artifacts/a80da89d0fb528913efffff81a0cf1e2ab988cb2/include/oneapi/tbb/detail/_flow_graph_trace_impl.h
     	binaries/share/julia/artifacts/a80da89d0fb528913efffff81a0cf1e2ab988cb2/include/oneapi/tbb/detail/_flow_graph_types_impl.h
@@ -1474,16 +1486,14 @@ saveFMU(fmu, fmu_save_path, fmu_source_path; debug=false, compress=false) # feel
     	binaries/share/julia/artifacts/a80da89d0fb528913efffff81a0cf1e2ab988cb2/lib/cmake/TBB/TBBConfigVersion.cmake
     	binaries/share/julia/artifacts/a80da89d0fb528913efffff81a0cf1e2ab988cb2/lib/cmake/TBB/TBBTargets-release.cmake
     	binaries/share/julia/artifacts/a80da89d0fb528913efffff81a0cf1e2ab988cb2/lib/cmake/TBB/TBBTargets.cmake
-
-    
     	binaries/share/julia/artifacts/a80da89d0fb528913efffff81a0cf1e2ab988cb2/lib/pkgconfig/tbb.pc
     	binaries/share/julia/artifacts/a80da89d0fb528913efffff81a0cf1e2ab988cb2/share/doc/TBB/README.md
+    
+
     	binaries/share/julia/artifacts/a80da89d0fb528913efffff81a0cf1e2ab988cb2/share/licenses/oneTBB/LICENSE.txt
-    
-
     	binaries/win64/BouncingBall.dll
-    
 
+    
     	binaries/win64/libLLVM-15jl.dll
     
 
@@ -1506,8 +1516,8 @@ saveFMU(fmu, fmu_save_path, fmu_source_path; debug=false, compress=false) # feel
     	binaries/win64/libgmpxx.dll
     	binaries/win64/libgomp-1.dll
     	binaries/win64/libjulia-codegen.dll
-    
 
+    
     	binaries/win64/libjulia-internal.dll
     	binaries/win64/libjulia.dll
     	binaries/win64/libklu.dll
@@ -1521,6 +1531,8 @@ saveFMU(fmu, fmu_save_path, fmu_source_path; debug=false, compress=false) # feel
     	binaries/win64/libnghttp2-14.dll
     	binaries/win64/libopenblas64_.dll
     	binaries/win64/libopenlibm.dll
+    
+
     	binaries/win64/libpcre2-16-0.dll
     	binaries/win64/libpcre2-16.dll
     	binaries/win64/libpcre2-32-0.dll
@@ -1546,7 +1558,7 @@ saveFMU(fmu, fmu_save_path, fmu_source_path; debug=false, compress=false) # feel
     [36m[1m[ [22m[39m[36m[1mInfo: [22m[39m[Build FMU] ... zipping FMU done.
     [36m[1m[ [22m[39m[36m[1mInfo: [22m[39m[Build FMU] Clean up ...
     [36m[1m[ [22m[39m[36m[1mInfo: [22m[39m[Build FMU] ... clean up done.
-    [36m[1m[ [22m[39m[36m[1mInfo: [22m[39mFMU-Export succeeded after 16m 22s (1.1% packing time)
+    [36m[1m[ [22m[39m[36m[1mInfo: [22m[39mFMU-Export succeeded after 15m 59s (1.0% packing time)
     
 
 
@@ -1570,8 +1582,6 @@ cp(fmu_save_path, joinpath("Export-BouncingBall_files", "BouncingBall.fmu"))
     "Export-BouncingBall_files\\BouncingBall.fmu"
 
 
-
-The FMU files generated by this example can be downloaded [here](https://github.com/ThummeTo/FMIExport.jl/tree/examples/examples/jupyter-src/Export-BouncingBall_files)
 
 One current limitation of Julia-FMUs is, that they can not be imported back into Julia, as it is currently not allowed having two Julia-sys-images existing at the same time within the same process. (The Julia FMU comes bundeled with its own image) 
 

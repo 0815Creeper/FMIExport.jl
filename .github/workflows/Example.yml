@@ -140,7 +140,7 @@ jobs:
             
   call-docu:
     needs: [jupyter, pluto]
-    if: github.event_name != 'pull_request' && github.ref_name == 'main'
+    if: ${{ secrets.FMI_DOC_TRIGGER_PAT != '' }} && github.event_name != 'pull_request' && github.ref_name == 'main'
     runs-on: ubuntu-latest
     steps:
       # Trigger an repoisitory dispath event

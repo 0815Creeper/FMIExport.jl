@@ -140,13 +140,19 @@ jobs:
             
   call-docu:
     needs: [jupyter, pluto]
-    if: github.event_name != 'pull_request' && github.ref_name == 'main'
+    if: github.event_name != 'pull_request' && github.ref_name == 'main') || github.ref_name == 'tests-on-fmPy-0.4.1'
     runs-on: ubuntu-latest
+    env: 
+      HAS_TRIGGER_TOKEN: ${{ secrets.FMI_DOC_TRIGGER_PAT != '' }}
     steps:
       # Trigger an repoisitory dispath event
       - name: Repository Dispatch
+        if: ${{ env.HAS_TRIGGER_TOKEN == 'true' }}
         uses: peter-evans/repository-dispatch@v3
         with:
           token: ${{ secrets.FMI_DOC_TRIGGER_PAT }}
           repository: 'ThummeTo/FMI.jl'
           event-type: trigger-docu
+      - name: no-token-warning
+        if: ${{ env.HAS_TRIGGER_TOKEN != 'true' }}
+        run: echo "::warning,title=no token for FMI-Repo::calling building of documentation requires an accesstoken for FMI.jl github repository, that is added as secrets.FMI_DOC_TRIGGER_PAT"

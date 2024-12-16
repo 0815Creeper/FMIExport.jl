@@ -32,6 +32,11 @@ else
     # if not on windows, use BouncingBall from FMIZoo
     using FMIZoo
     fmu_save_path = FMIZoo.get_model_filename("BouncingBall1D", "Dymola", "2023x")
+
+    # check if FMU exists
+    @test isfile(fmu_save_path)
+    fsize = filesize(fmu_save_path) / 1024 # / 1024 # check for 300KB instead of 300 MB as FMIZoo FMU is smaller
+    @test fsize > 300 
 end
 
 # mutex implementation: indicates running state of fmpy script. File must only be created and cleared afterwards by fmpy script
